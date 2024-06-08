@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
+        border: 1px solid black;
+        color: black;
+        box-shadow: 10px;
+        width: 50%;
+        text-align: center;
+        padding: 20px;
+        font-size: 40px;
+      "
+      id="word"
+    >
+      Hello World!
+    </h1>
+
+    <div>
+      <label id="CityLabel">
+        <select
+          id="City"
+          style="
+            font-size: 30px;
+            padding: 20px;
+            width: 200px;
+            margin: 50px 0;
+            border: 5px solid black;
+          "
+        >
+          <option value="1" selected>Jordan</option>
+          <option value="2">Palestine</option>
+          <option value="3">Syria</option>
+        </select>
+        <img
+          src="pic/istockphoto-182826898-612x612.jpg"
+          alt="Jordan flag"
+          id="flag"
+          style="
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            width: 700px;
+            height: auto;
+          "
+        />
+      </label>
+    </div>
+    <div>
+      <label id="fontType">
+        <select
+          onclick="applyFontSize(value)"
+          id="font"
+          style="
+            font-size: 30px;
+            padding: 10px;
+            width: 400px;
+            margin: 50px 0;
+            border: 1px solid black;
+          "
+        >
+          <option value="Times New Roman" selected>Times New Roman</option>
+          <option value="fantasy">fantasy</option>
+          <option value="Arial">Arial</option>
+          <option value="cursive">cursive</option>
+        </select>
+      </label>
+      <label id="fontSize">
+        <select
+          onclick="applyFontFamil(value)"
+          id="size"
+          style="
+            font-size: 30px;
+            padding: 10px;
+            width: 115px;
+            margin: 50px 0;
+            border: 1px solid black;
+          "
+        >
+          <option value="14px">14px</option>
+          <option value="20px">20px</option>
+          <option value="25px">25px</option>
+          <option value="30px " selected>30px</option>
+          <option value="40px">40px</option>
+          <option value="50px">50px</option>
+        </select>
+      </label>
+      <input
+        type="checkbox"
+        id="Italic"
+        style="transform: scale(2); margin: 0 10px"
+      />
+      <label for="Italic" style="font-size: 30px; width: 115px">Italic</label>
+      <input
+        type="checkbox"
+        id="Bold"
+        style="transform: scale(2); margin: 0 10px"
+      />
+      <label for="Bold" style="font-size: 30px; width: 115px">Bold</label>
+      <input
+        type="checkbox"
+        id="Underline"
+        style="transform: scale(2); margin: 0 10px"
+      />
+      <label for="Underline" style="font-size: 30px; width: 115px"
+        >Underline</label
+      >
+      <div style="border: 3px solid black; width: 1000px; height: 300px">
+        <p id="dothechange">The quik brown fox over the lazy dog.</p>
+      </div>
+    </div>
+    <script src="script1.js"></script>
+  </body>
+</html>
