@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IWTD</title>
+    <style>
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr;
+        max-width: 700px;
+        gap: 10px;
+      }
+      label::after {
+        content: ":";
+      }
+      .warning {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="firstName">Enter first name</label>
+      <input type="text" name="firstName" id="firstName" />
+      <div id="firstName-warning" class="warning"></div>
+      <label for="lastName">Enter last name</label>
+      <input type="text" name="lastName" id="lastName" />
+      <div id="lastName-warning" class="warning"></div>
+      <label for="birthDate">Enter birth date</label>
+      <input type="text" name="birthDate" id="birthDate" placeholder="dd/mm/yyyy" />
+      <div id="birthDate-warning" class="warning"></div>
+      <label for="email">Enter an email</label>
+      <input type="text" name="email" id="email" />
+      <div id="email-warning" class="warning"></div>
+      <label for="confirmEmail">Confirm email</label>
+      <input type="text" name="confirmEmail" id="confirmEmail" />
+      <div id="confirmEmail-warning" class="warning"></div>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+      <div id="password-warning" class="warning"></div>
+      <label for="confermPassword">Confirm password</label>
+      <input type="password" name="confirmPassword" id="confirmPassword" />
+      <div id="confirmPassword-warning" class="warning"></div>
+    </form>
+    <script src="regex.js">
+    
+    </script>
+  </body>
+</html>
