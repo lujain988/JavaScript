@@ -47,17 +47,22 @@ async function jsonimgchang() {
   console.log("respData", respData);
 
   let select = document.getElementById("selectedData");
-  let imgch = document.getElementById("imgg");
-  imgch.src = respData[1].image;
+  let image = document.getElementById("imgg");
+  image.src = respData[1].image;
   select.value = respData[1].image;
-
   for (let i = 0; i < respData.length; i++) {
-    let oplist = document.createElement("option");
-    oplist.innerHTML = respData[i].name;
-    select.appendChild(oplist);
-    oplist.value = respData[i].image;
+    let optionList = document.createElement("option");
+    optionList.innerHTML = respData[i].name;
+    optionList.value = respData[i].image;
+    if (i == 1) {
+      optionList.selected = true;
+    }
+
+    select.appendChild(optionList);
   }
+  select.appendChild(optionList);
 }
+
 jsonimgchang();
 let imgch = document.getElementById("imgg");
 function imgchange(value) {
