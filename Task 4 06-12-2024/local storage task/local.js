@@ -1,17 +1,33 @@
-let form = document.getElementById("userForm");
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let formData = new FormData(form);
-  const data = { programmingLanguage: [] };
-  formData.forEach((value, key) => {
-    console.log(value);
-    if (key === "programmingLanguage") data[key].push(value);
-    else data[key] = value;
-  });
-  let allResponses = localStorage.allResponses;
-  if (!allResponses) allResponses = [];
-  else allResponses = JSON.parse(allResponses);
-  allResponses.push(data);
-  console.log(allResponses);
-  localStorage.allResponses = JSON.stringify(allResponses);
-});
+
+document.getElementsByTagName ("form")[0].addEventListener("submit",event=>{
+  event.preventDefault()
+      let obj={
+          name:document.getElementById("name").value,
+          age:document.getElementById("age").value,
+         Gender: document.getElementById("gender").value,
+         BirthDate :document.getElementById("birthdate").value,
+         YourImage:document.getElementById("image").value,
+         Description:document.getElementById("description").value,
+         major:document.getElementById("major").value,
+         programmingLanguages:[],
+         
+         siblingnumber:document.getElementById("siblings").value,
+         descriptionOfSiblings:document.getElementById("desofs").value,
+
+
+
+         
+      }
+    
+      if(document.getElementById("html").checked ) 
+      {obj.programmingLanguages.push("HTML")}  
+      if(document.getElementById("css").checked ) 
+      {obj.programmingLanguages.push("CSS")}  
+      if(document.getElementById("js").checked ) 
+      {obj.programmingLanguages.push("js")}  
+      
+      
+
+  localStorage.setItem("my data",JSON.stringify(obj))
+
+})
