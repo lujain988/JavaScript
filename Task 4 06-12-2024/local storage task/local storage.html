@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <form>
- <div>      
-<label>Name:</label>
-<input type="text"  id="name">
-</div> <br>
-<label>Age:</label>
-<input type="number"  id="age">
-<div><br>
-<div>
- <label>Gender:</label>
-<input type="text"  id="gender">
-</div><br>
-<div>
-<label>Birth Date:</label>
-<input type="date"  id="birthdate">
-</div><br>
-<div>
-<label>Your image:</label>
-<input type="text"  id="image"> 
-</div><br>
-<hr>
-<div>
-<label>Description:</label>
-<input type="text"  id="description">
-</div><br>
-<div>
-<label>major & university:</label>
-<input type="text"  id="major">
-</div><br>
-<div>
-<label>Programming Language :</label>
-<input type="checkbox"  id="html">
-<label>HTML</label>
-<input type="checkbox"  id="css">
-<label>CSS</label>
-<input type="checkbox"  id="js">
-<label>JS</label>
-</div><br>
-<div>
-<hr>
-<div>
-    <label>siblings number:</label>
-    <input type="number"  id="siblings">  
-</div><br>
-
-<div>
-    <label>description of siblings :</label>
-    <input type="text"  id="desofs">  
-</div><br>
-<button >Submit</button>
+  </head>
+  <body>
+    <h1>display each ...............</h1>
+    <form id="myForm">
+      <fieldset>
+        <div>
+          <label> Name <input type="text" id="Name" /> </label>
+        </div>
+        <br />
+        <div>
+          <label> Age <input type="text" id="Age" /> </label>
+        </div>
+        <br />
+        <div>
+          <label> Gender <input type="text" id="Gender" /> </label>
+        </div>
+        <br />
+        <div>
+          <label> Birthdate <input type="date" id="Birthdate" /> </label>
+        </div>
+        <br />
+        <div>
+          <label> Image <input type="file" id="Image" /> </label>
+        </div>
+        <br />
+      </fieldset>
+      <fieldset>
+        <div>
+          <label> Description <input type="text" id="Description" /> </label>
+        </div>
+        <br />
+        <div>
+          <label> Major <input type="text" id="Major" /> </label>
+        </div>
+        <br />
+        <div>
+          <label>Programming </label>
+          <input type="checkbox" id="checkboxhtml" />
+          <label for="checkboxhtml">HTML</label
+          ><input type="checkbox" id="checkboxcss" />
+          <label for="checkboxcss">CSS</label
+          ><input type="checkbox" id="checkboxjs" />
+          <label for="checkboxjs">JS</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <label> Siblings# <input type="number" id="Siblings" /> </label>
+        </div>
+        <br />
+        <div>
+          <label> DiscSib <input type="text" id="DiscSib" /> </label>
+        </div>
+        <br />
+      </fieldset>
+      <button>Submit</button>
     </form>
-    
-    <script src="local.js">
-   
-    
-    </script>
-</body>
+    <script src="local.js"></script>
+  </body>
 </html>
