@@ -38,33 +38,26 @@
 // }
 
 //  getData();
-let url = "https://66681676f53957909ff67af8.mockapi.io/users/Animals";
+const url = "https://66681676f53957909ff67af8.mockapi.io/users/Animals";
+async function jsonChange() {
+  const Change = await fetch(url);
+  const newData = await Change.json();
+  let select = document.getElementById("Animals");
+  //
+  for (let i = 0; i < newData.length; i++) {
+    let option = document.createElement("option");
+    option.innerHTML = newData[i].name;
+    option.value = newData[i].image;
 
-async function jsonimgchang() {
-  const jfetch = await fetch(url);
-  console.log("jfetch", jfetch);
-  const respData = await jfetch.json();
-  console.log("respData", respData);
-
-  let select = document.getElementById("selectedData");
-  let image = document.getElementById("imgg");
-  image.src = respData[1].image;
-  select.value = respData[1].image;
-  for (let i = 0; i < respData.length; i++) {
-    let optionList = document.createElement("option");
-    optionList.innerHTML = respData[i].name;
-    optionList.value = respData[i].image;
-    if (i == 1) {
-      optionList.selected = true;
-    }
-
-    select.appendChild(optionList);
+    select.appendChild(option);
   }
-  select.appendChild(optionList);
+  let image = document.getElementById("images");
+  image.src = newData[1].image;
+  select.value = newData[1].image;
+}
+jsonChange();
+let imageChange = document.getElementById("images");
+function Changing(value) {
+  imageChange.src = value;
 }
 
-jsonimgchang();
-let imgch = document.getElementById("imgg");
-function imgchange(value) {
-  imgch.src = value;
-}
